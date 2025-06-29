@@ -1,4 +1,4 @@
-module github.com/vadkvadrad/track-service
+module track-service
 
 go 1.23.0
 

@@ -3,9 +3,9 @@ package handler
 
 import (
     "context"
-    "github.com/vadkvadrad/track-service/internal/model"
-    "github.com/vadkvadrad/track-service/internal/service"
-    pb "github.com/vadkvadrad/track-service/proto"
+    "track-service/internal/model"
+    "track-service/internal/service"
+    pb "track-service/proto"
 )
 
 type TrackHandler struct {
