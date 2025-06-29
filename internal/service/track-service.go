@@ -2,8 +2,8 @@ package service
 
 import (
     "context"
-    "track-service/internal/model"
-    "track-service/internal/repository"
+    "github.com/vadkvadrad/track-service/internal/model"
+    "github.com/vadkvadrad/track-service/internal/repository"
 )
 
 type TrackService struct {

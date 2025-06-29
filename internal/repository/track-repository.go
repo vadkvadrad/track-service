@@ -4,7 +4,7 @@ package repository
 import (
     "context"
     "github.com/jackc/pgx/v4/pgxpool"
-    "track-service/internal/model"
+    "github.com/vadkvadrad/track-service/internal/model"
 )
 
 type TrackRepository struct {
