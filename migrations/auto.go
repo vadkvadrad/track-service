@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/track-service/internal/model"
+	"github.com/vadkvadrad/track-service/internal/model"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

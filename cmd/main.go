@@ -5,12 +5,12 @@ import (
 	"log"
 	"net"
 
-	"github.com/track-service/internal/config"
-	"github.com/track-service/internal/handler"
-	"github.com/track-service/internal/repository"
-	"github.com/track-service/internal/service"
-	db "github.com/track-service/pkg"
-	pb "github.com/track-service/proto"
+	"github.com/vadkvadrad/track-service/internal/config"
+	"github.com/vadkvadrad/track-service/internal/handler"
+	"github.com/vadkvadrad/track-service/internal/repository"
+	"github.com/vadkvadrad/track-service/internal/service"
+	db "github.com/vadkvadrad/track-service/pkg"
+	pb "github.com/vadkvadrad/track-service/proto"
 	"google.golang.org/grpc"
 )
 
