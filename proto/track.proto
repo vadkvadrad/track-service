@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+message TrackIDRequest {
+  string id = 1;
+}
+
+message CreateTrackRequest {
+  string id = 1;
+  string title = 2;
+  string album_id = 3;
+  string artist_id = 4;
+  int32 duration_sec = 5;
+  string genre = 6;
+  string release_date = 7;
+  string url = 8;
+}
+
+message TrackResponse {
+  string id = 1;
+  string title = 2;
+  string album_id = 3;
+  string artist_id = 4;
+  int32 duration_sec = 5;
+  string genre = 6;
+  string release_date = 7;
+  string url = 8;
+}
+
+message Empty {}
+
+service TrackService {
+  rpc GetTrack(TrackIDRequest) returns (TrackResponse);
+  rpc CreateTrack(CreateTrackRequest) returns (Empty);
+}

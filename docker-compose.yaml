@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: track-service-postgres
+    image: postgres
+    environment: 
+      POSTGRES_USER: track
+      POSTGRES_PASSWORD: track_pass
+      PGDATA: /data/postgres
+    volumes:
+      - ./postgres-data:/data/postgres
+    ports:
+      - "5432:5432"
+
+  track-service:
+    container_name: track-service-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "50051:50051" # порт gRPC
+    environment:
+      DSN: "postgres://track:track_pass@postgres:5432/track?sslmode=disable"
+    depends_on:
+      - postgres
+    restart: on-failure
+    
